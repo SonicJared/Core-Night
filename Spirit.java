@@ -31,10 +31,15 @@ class Spirit{
         System.out.println("Option 2: Follow the man.");
         System.out.print("Type 1 or 2 and press enter: ");
         o = sc.nextInt();
-        if(o == 1)c = 2;
-        else if(o == 2){c = 3;
+        if(o == 1){
+          c = 2;
+        }
+        else if(o == 2){
+          c = 3;
           System.out.println("The man brings you to an apartment building and hands you keys to a small apartment.");
-        }else System.out.println("Please type 1 or 2 and press enter.");
+        }else{
+          System.out.println("Please type 1 or 2 and press enter.");
+        }
         break;
 
       case 2:
@@ -48,15 +53,22 @@ class Spirit{
         if(o == 1){
           c = 2;
           System.out.println(dName+" doesn't seem to be getting better.");
-        }else if(o == 2)c = 1;
-        else System.out.println("Please type 1 or 2 and press enter.");
+        }else if(o == 2){
+          c = 1;
+        }else{
+          System.out.println("Please type 1 or 2 and press enter.");
+        }
         break;
 
       case 3:
         System.out.println();
         health -= 1;
-        if(health>4)System.out.println("You have settled in to your new apartment, and found that things are very different here. Western Medecine is not accepted. You feel very alone. "+dName+" gets a severe headache.");
-        if(health<=4)System.out.println(dName+" is very sick and has a very severe headache.");
+        if(health>4){
+            System.out.println("You have settled in to your new apartment, and found that things are very different here. Western Medecine is not accepted. You feel very alone. "+dName+" gets a severe headache.");
+        }
+        if(health<=4){
+            System.out.println(dName+" is very sick and has a very severe headache.");
+        }
         System.out.println("Option 1: Go out and purchase some advil for "+dName+".");
         System.out.println("Option 2: Go to the local healer.");
         System.out.print("Type 1 or 2 and press enter: ");
@@ -64,8 +76,11 @@ class Spirit{
         if(o == 1){
           c = 3;
           System.out.println("The Advil doesn't seem to help.");
-        }else if(o == 2)c = 4;
-        else System.out.println("Please type 1 or 2 and press enter.");
+        }else if(o == 2){
+          c = 4;
+        }else{
+          System.out.println("Please type 1 or 2 and press enter.");
+        }
         break;
 
       case 4:
@@ -79,19 +94,25 @@ class Spirit{
         if(o == 1){
         	c = 6;
          	health += 1;
-        }else if(o == 2)c = 5;
-        else if(o == 3)c = 5;
-        else System.out.println("Please type 1, 2 or 3 and press enter.");
+        }else if(o == 2){
+            c = 5;
+        }else if(o == 3){
+            c = 5;
+        }else{
+          System.out.println("Please type 1, 2 or 3 and press enter.");
+        }
         break;
 
       case 5:
         System.out.println();
         if(health < 5){
-         	System.out.println("Men in uniform knock on your door and take "+dName+" away. You don't know why. She is gone for a long time.");
-         	System.out.println("Finally "+dName+" comes home. She looks sicker.");
-         	health -= 1;
-         	c = 6;
-        }else c = 6;
+           System.out.println("Men in uniform knock on your door and take "+dName+" away. You don't know why. She is gone for a long time.");
+           System.out.println("Finally "+dName+" comes home. She looks sicker.");
+           health -= 1;
+           c = 6;
+        }else{
+          c = 6;
+        }
         break;
 
       case 6:
@@ -110,7 +131,9 @@ class Spirit{
         }else if(o == 3){
           c = 6;
      	  health -= 2;
-        }else System.out.println("Please type 1, 2 or 3 and press enter.");
+        }else{
+          System.out.println("Please type 1, 2 or 3 and press enter.");
+        }
         break;
 
       case 7:
@@ -126,8 +149,11 @@ class Spirit{
         else if(o == 3 || o == 4){
           health -= 1;
      	  c = 8;
-        }else if(o == 2)c = 9;
-        else System.out.println("Please type 1, 2, 3, or 4 and press enter.");
+        }else if(o == 2){
+          c = 9;
+        }else{
+          System.out.println("Please type 1, 2, 3, or 4 and press enter.");
+        }
         break;
 
       case 8:
@@ -138,9 +164,13 @@ class Spirit{
         System.out.println("Option 3: Do nothing.");
         System.out.println("Type 1, 2, or 3 and press enter: ");
         o = sc.nextInt();
-        if(o == 1 || o == 3)health = 0;
-        else if(o == 2)c = 10;
-        else System.out.println("Please type 1, 2 or 3 and press enter.");
+        if(o == 1 || o == 3){
+          health = 0;
+        }else if(o == 2){
+          c = 10;
+        }else{
+          System.out.println("Please type 1, 2 or 3 and press enter.");
+        }
         break;
 
       case 9:
@@ -151,9 +181,13 @@ class Spirit{
         System.out.println("Option 3: Feed "+dName+" the herbs, and plant the beans.");
         System.out.print("Type 1, 2 or 3 and press enter: ");
         o = sc.nextInt();
-        if(o == 1)c = 11;
-        else if(o == 2 || o == 3)health = 0;
-        else System.out.println("Please type 1, 2 or 3 and press enter.");
+        if(o == 1){
+          c = 11;
+        }else if(o == 2 || o == 3){
+          health = 0;
+        }else{
+          System.out.println("Please type 1, 2 or 3 and press enter.");
+        }
         break;
 
       case 10:
